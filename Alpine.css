@@ -24,18 +24,18 @@
 }
 .background {
   height: 80vh;
-  overflow: hidden;          /* hides the images waiting off-screen */
+  overflow: hidden;
 }
 
 .track {
   display: flex;
-  width: 300%;               /* 100% x number of images */
+  width: 300%;
   height: 100%;
   animation: slide 15s infinite;
 }
 
 .bg {
-  width: calc(100% / 3);     /* each image fills one screen width */
+  width: calc(100% / 3);
   height: 100%;
   background-size: cover;
   background-position: center;
