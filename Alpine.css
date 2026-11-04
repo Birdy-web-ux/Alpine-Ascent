@@ -42,7 +42,7 @@
 }
 
 .bg1 { background-image: url(background.jpg); }
-/* .bg2 { background-image: url(background2.jpg); }
+.bg2 { background-image: url(background2.jpg); }
 .bg3 { background-image: url(background3.jpg); }
 
 @keyframes slide {
@@ -50,7 +50,7 @@
   33%, 61%  { transform: translateX(-33.333%); }
   66%, 94%  { transform: translateX(-66.666%); }
   100%      { transform: translateX(0); }
-} */
+}
  .slidertxt{
     font-family: 'Arial', sans-serif;
     font-size: 20px;
@@ -66,3 +66,103 @@
  .slidertxt2{
     color:#D9A520;
  }
+ .slidertxt3{
+    font-family: 'Arial', sans-serif;
+    font-size: 25px;
+    color:#7FB0D6;
+    transform: translate(40px,100px);
+ }
+#exp, #club {
+  display: inline-block;
+  padding: 10px 22px;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 1.2;
+  border-radius: 10px;
+  border: 1px solid #D9A520;
+  text-decoration: none;
+  cursor: pointer;
+  box-sizing: border-box;
+  transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease;
+  min-width: 160px;
+  text-align: center;
+}
+
+#exp {
+  color: black;
+  background-color: #D9A520;
+  margin: 100px 0 0 40px;
+}
+
+#club {
+  color: white;
+  background-color: transparent;
+  margin: 100px 0 0 12px;
+}
+
+#exp:hover, #club:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, .25);
+}
+.abouttext{
+    font-family: 'Arial', sans-serif;
+    float: left;
+    background-color:#0F1830;
+    width: 50%;
+    height: 600px;
+}
+.abt{
+    font-family: 'Arial', sans-serif;
+    font-size: 20px;
+    color:#D9A520;
+    transform: translate(20px,60px);
+}
+.abt1{
+    font-family: 'Arial', sans-serif;
+    font-size: 50px;
+    color:snow;
+    transform: translate(18px,40px);
+}
+.abt2{
+    font-family: 'Arial', sans-serif;
+    font-size: 20px;
+    color:#7FB0D6;
+    transform: translate(19px,30px);
+}
+.abt3{
+    font-family: 'Arial', sans-serif;
+    font-size: 20px;
+    color:#7FB0D6;
+    transform: translate(19px,28px);
+}
+#abtbtn {
+    background-color: #D9A520;
+    margin-left: 19px;
+    margin-top: 14px;
+    transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease;
+    display: inline-block;
+}
+
+#abtbtn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, .25);
+}
+.rules{
+    background-color:#0F1830;
+    float: right;
+    width: 50%;
+    height: 600px;
+}
+.list{
+    background-color:#41618e;
+    width: 60%;
+    height: 50%;
+    margin-top: 190px;
+    margin-left: 190px;
+    border-radius: 10px;
+}
+.list ul li{
+    font-family: 'Arial', sans-serif;
+    color:snow;
+    margin-top: 30px;
+}
