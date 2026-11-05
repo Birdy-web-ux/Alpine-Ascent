@@ -1,0 +1,24 @@
+#Nav{
+    background-color:#0F1830;
+}
+#navitem{
+    color:#F4F7FB;
+    border-bottom: 3px solid transparent;
+  transition: color .3s, border-color .3s;
+}
+#navitem:hover{
+    color:#D9A520;
+    border-bottom-color: #D9A520;
+}
+#navitem.active{
+    color:black;
+    border-bottom-color: #F4F7FB;
+    background-color:#D9A520;
+}
+#contactbtn{
+    background-color:#D9A520;
+}
+#contactbtn:hover{
+    background-color:#F4F7FB;
+    color:#D9A520;
+}
