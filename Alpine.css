@@ -156,13 +156,17 @@
 .list{
     background-color:#41618e;
     width: 60%;
-    height: 50%;
-    margin-top: 190px;
-    margin-left: 190px;
+    height: 43%;
+    margin-top: 70px;
+    margin-left: 100px;
     border-radius: 10px;
 }
 .list ul li{
     font-family: 'Arial', sans-serif;
     color:snow;
-    margin-top: 30px;
+    margin-top: 25px;
+}
+.list:hover{
+    box-shadow: 0 8px 18px #41618e;
+    transition: box-shadow 0.4s Linear;
 }
