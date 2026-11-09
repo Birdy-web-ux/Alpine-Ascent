@@ -324,6 +324,71 @@
     .sevensummits { font-size: 1.6rem; }
     #carouselExampleCaptions .carousel-indicators { margin-bottom: .5rem; }
 }
+/* ===== Seven Summits layout + quotes ===== */
+.summits-layout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    max-width: 1200px;
+    margin: 20px auto 0;
+    padding: 0 20px;
+}
+.summits-layout #carouselExampleCaptions {
+    flex: 1 1 360px;
+    max-width: 500px;
+    margin: 0;
+}
+.quote-card {
+    flex: 0 1 220px;
+    background-color: #41618e;
+    border: 1px solid #7FB0D6;
+    border-left: 4px solid #D9A520;
+    border-radius: 10px;
+    padding: 16px 18px;
+    font-family: Arial, sans-serif;
+    transition: box-shadow .3s ease;
+}
+.quote-card:hover {
+    box-shadow: 0 8px 18px rgba(0, 0, 0, .35);
+}
+.quote-text {
+    color: snow;
+    font-style: italic;
+    font-size: 1rem;
+    line-height: 1.45;
+    margin: 0 0 10px;
+}
+.quote-author {
+    color: #D9A520;
+    font-size: .88rem;
+    margin: 0;
+}
+.quote-card.right { margin-bottom: 100px; } /* sits higher */
+.quote-card.left  { margin-top: 100px; }    /* sits lower  */
+
+/* ===== Seven Summits responsive ===== */
+@media (max-width: 991px) {
+    .summits-layout {
+        flex-direction: column;
+        padding: 0 16px;
+    }
+    .quote-card,
+    .quote-card.left,
+    .quote-card.right {
+        flex: 1 1 auto;
+        width: 100%;
+        max-width: 500px;
+        margin: 0;
+    }
+    .quote-card.left  { order: 2; }
+    .summits-layout #carouselExampleCaptions { order: 1; margin: 0 auto; }
+    .quote-card.right { order: 3; }
+}
+@media (max-width: 480px) {
+    .quote-text { font-size: .95rem; }
+    .quote-author { font-size: .82rem; }
+}
 .courses{
     background-color: #0F1830;
 }
@@ -350,6 +415,10 @@
     border: 1px solid #7FB0D6;
     border-radius: 10px;
     padding: 24px;
+    transition: box-shadow .4s linear;
+}
+.skills-col:hover {
+    box-shadow: 0 0 14px #7FB0D6;
 }
 .courses3,
 .interskills,
@@ -368,24 +437,12 @@
     color: snow;
     font-family: Arial, sans-serif;
 }
-#sk1:hover{
-    box-shadow: 0px 0px 14px #7FB0D6;
-    transition: all 0.4s linear;
-}
-#sk2:hover{
-    box-shadow: 0px 0px 14px #7FB0D6;
-    transition: all 0.4s linear;
-}
-#sk3:hover{
-    box-shadow: 0px 0px 14px #7FB0D6;
-    transition: all 0.4s linear;
-}
 .Skills li {
     margin-bottom: 14px;
 }
 @media (max-width: 991px) {
     .skills-grid { grid-template-columns: repeat(2, 1fr); }
-    #sk3 { grid-column: 1 / -1; }
+    .skills-grid > .skills-col:last-child { grid-column: 1 / -1; }
 }
 @media (max-width: 768px) {
     .courses { padding: 40px 16px; }
@@ -393,7 +450,7 @@
 }
 @media (max-width: 650px) {
     .skills-grid { grid-template-columns: 1fr; gap: 18px; }
-    #sk3 { grid-column: auto; }
+    .skills-grid > .skills-col:last-child { grid-column: auto; }
     .skills-col { padding: 18px; }
     .Skills { font-size: .95rem; }
 }
@@ -433,7 +490,6 @@
     color: #D9A520;
     margin: 0 0 6px;
 }
-
 .guide-contact p {
     margin: 0;
 }
