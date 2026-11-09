@@ -36,7 +36,6 @@
     .navbar-brand img { height: 70px; width: 70px; }
     #contactbtn { font-size: .85rem; padding: 6px 12px; }
 }
-/* tablet + phone: collapsed menu */
 @media (max-width: 991px) {
     .navbar-brand img { height: 70px; width: 70px; }
     .navbar .navitem { padding: 10px 12px; }
@@ -98,14 +97,19 @@
     color: #7FB0D6;
     max-width: 40ch;
 }
+.slidertxt31{
+    font-family: Arial, sans-serif;
+    font-size: clamp(16px, 2.5vw, 25px);
+    color: snow;
+    max-width: 40ch;
+}
 .slider-buttons {
     display: flex;
     flex-wrap: wrap;
     gap: 12px;
     margin-top: 2rem;
 }
-.exp,
-.club {
+.exp,.club {
     min-width: 160px;
     padding: 10px 22px;
     font-size: 16px;
