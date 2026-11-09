@@ -1,10 +1,10 @@
-html,
-body {
+html,body {
     max-width: 100%;
     overflow-x: hidden;
 }
-   #Nav {
+#Nav {
     background-color: #0F1830;
+    border-bottom: solid 4px #D9A520;
 }
 
 .navbar .navitem {
