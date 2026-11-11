@@ -16,6 +16,7 @@
     background-color: #F8FAFC;
 }
 #contactbtn {
+    border-radius: 10px;
     background-color: #E8621F;
     color: #F8FAFC;
     border: 1px solid #E8621F;
