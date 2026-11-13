@@ -1,3 +1,11 @@
+*, *::before, *::after { box-sizing: border-box; }
+html, body { overflow-x: hidden; }
+
+.navbar-brand img {
+    height: 80px;
+    width: 80px;
+    object-fit: contain;
+}
 #Nav {
     background-color: #2C99D6;
 }
@@ -638,7 +646,4 @@ h1, h2, h3, h4, h5, h6 {
 .site-footer, .site-footer p, .site-footer a,
 .sevensummits1 {
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
-}
-ul.custom-icon{
-    list-style-image: url(https://img.icons8.com/?size=160&id=duyd7dV5MrOz&format=png);
 }
