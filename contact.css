@@ -47,3 +47,130 @@
 @media (max-width: 480px) {
     .navbar-brand img { height: 56px; width: 56px; }
 }
+
+
+
+
+/* NO CSS FOR MAP HUHHHH */
+
+
+
+ /* form--- */
+
+ body {
+  background-color:white;
+}
+
+.form-label {
+  font-weight: bold;
+  color: #0F2A3F;
+}
+
+.form-control,
+.form-select {
+  border: 1px solid #0F2A3F;
+  border-radius: 10px;
+  padding: 12px;
+}
+
+.btn-send {
+  background-color:blue;
+  color: white;
+}
+
+.btn-send:hover {
+  background-color: #66b5a5;
+  color: white;
+}
+/* fornend-- */
+
+
+/* footer  */
+
+.site-footer {
+    background-color: #0F2A3F;
+    border-top: 4px solid #2C99D6;
+    padding: 50px 20px 20px;
+    font-family: Arial, sans-serif;
+    color: #F8FAFC;
+}
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.4fr;
+    gap: 30px;
+}
+.site-footer h4 {
+    color: #F8FAFC;
+    margin: 0 0 10px;
+}
+.site-footer p {
+    margin: 4px 0;
+    opacity: .85;
+}
+.site-footer a {
+    display: block;
+    color: #F8FAFC;
+    opacity: .8;
+    text-decoration: none;
+    padding: 2px 0;
+    transition: opacity .2s, color .2s;
+}
+.site-footer a:hover {
+    opacity: 1;
+    color: #E8621F;
+}
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 30px;
+    padding-top: 16px;
+    border-top: 1px solid rgba(248, 250, 252, .2);
+    font-size: 14px;
+}
+.footer-links a {
+    display: inline;
+    margin-left: 16px;
+}
+@media (max-width: 991px) {
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 600px) {
+    .site-footer { padding: 36px 16px 16px; }
+    .footer-grid { grid-template-columns: 1fr; gap: 22px; }
+    .footer-bottom { flex-direction: column; gap: 8px; }
+    .footer-links a { margin: 0 16px 0 0; }
+}
+/* ===== Typography ===== */
+body {
+    font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+}
+
+.c1, .c3, .c31, .c5 {
+    font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+
+.c1 {
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+.c2, .c4, .c6, .c41 {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+
+
+/* footer  */
