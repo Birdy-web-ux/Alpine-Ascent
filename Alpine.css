@@ -639,3 +639,6 @@ h1, h2, h3, h4, h5, h6 {
 .sevensummits1 {
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
 }
+ul.custom-icon{
+    list-style-image: url(https://img.icons8.com/?size=160&id=duyd7dV5MrOz&format=png);
+}
