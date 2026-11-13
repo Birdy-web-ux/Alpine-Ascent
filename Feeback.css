@@ -47,250 +47,192 @@
 @media (max-width: 480px) {
     .navbar-brand img { height: 56px; width: 56px; }
 }
-
-
-
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.feedbackborder{
+    border: 1px solid black;
+    width: 1000px;
+    height: 600px;
+    transform: translate(450px,100px);
 }
-
-body {
-    font-family: Arial, sans-serif;
-    background: #f4f8fb;
-    color: #263746;
-}
-
-/* Navigation Bar */
-
-.navbar {
-    background: #2998d0;
-    min-height: 150px;
+/* ===== Feedback section ===== */
+.feedback {
+    background-color: #F8FAFC;
+    padding: 60px 20px;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 15px 35px;
-    gap: 20px;
+    justify-content: center;
 }
 
-.logo img {
-    width: 150px;
-    height: auto;
-    object-fit: contain;
-}
-
-.navbar nav {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    flex-wrap: wrap;
-}
-
-.navbar nav a {
-    color: white;
-    text-decoration: none;
-    font-size: 19px;
-    padding: 16px;
-    transition: 0.3s;
-}
-
-.navbar nav a:hover,
-.navbar nav a.active {
-    background: white;
-    color: #263746;
-}
-
-/* Feedback Section */
-
-.feedback-section {
-    padding: 55px 20px;
-}
-
-.feedback-heading {
-    text-align: center;
-    max-width: 700px;
-    margin: 0 auto 35px;
-}
-
-.small-title {
-    color: #2998d0;
-    font-size: 14px;
-    font-weight: bold;
-    letter-spacing: 3px;
-}
-
-.feedback-heading h1 {
-    font-size: 38px;
-    color: #173b56;
-    margin: 15px 0;
-}
-
-.feedback-heading p {
-    color: #647786;
-    line-height: 1.7;
-    font-size: 16px;
-}
-
-/* Feedback Form */
-
-.feedback-container {
-    max-width: 650px;
-    margin: auto;
-    background: white;
-    padding: 35px;
-    border-radius: 12px;
-    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
-}
-
-.feedback-container h2 {
-    color: #173b56;
-    font-size: 25px;
-    margin-bottom: 8px;
-}
-
-.form-description {
-    color: #82909b;
-    margin-bottom: 25px;
-}
-
-/* Input Fields */
-
-.form-group {
-    margin-bottom: 22px;
-}
-
-.form-group label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: #263746;
-}
-
-.form-group input,
-.form-group select,
-.form-group textarea {
+.feedback-inner {
     width: 100%;
-    padding: 14px;
-    border: 1px solid #d5dfe7;
-    border-radius: 6px;
-    font-size: 15px;
-    outline: none;
-    font-family: Arial, sans-serif;
-    background: white;
+    max-width: 640px;
 }
 
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
-    border-color: #2998d0;
-    box-shadow: 0 0 5px rgba(41, 152, 208, 0.2);
+.feedback-title {
+    font-family: 'Montserrat', system-ui, sans-serif;
+    font-weight: 700;
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    color: #0F2A3F;
+    letter-spacing: -0.02em;
+    text-align: center;
+    margin: 0 0 6px;
 }
 
-.form-group textarea {
-    height: 130px;
+.feedback-sub {
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 1rem;
+    color: #0F2A3F;
+    opacity: .75;
+    text-align: center;
+    margin: 0 0 28px;
+    line-height: 1.5;
+}
+
+.feedbackborder {
+    background-color: #F8FAFC;
+    border: 1px solid rgba(44, 153, 214, .35);
+    border-radius: 12px;
+    padding: 28px;
+    box-shadow: 0 4px 16px rgba(15, 42, 63, .06);
+}
+
+/* Inputs + textarea */
+.feedback .form-control {
+    font-family: 'Inter', system-ui, sans-serif;
+    color: #0F2A3F;
+    background-color: #F8FAFC;
+    border: 1px solid rgba(44, 153, 214, .4);
+    border-radius: 8px;
+    transition: border-color .2s, box-shadow .2s;
+}
+
+.feedback .form-control:focus {
+    color: #0F2A3F;
+    background-color: #F8FAFC;
+    border-color: #2C99D6;
+    box-shadow: 0 0 0 3px rgba(44, 153, 214, .18);
+}
+
+.feedback .form-floating > label {
+    font-family: 'Inter', system-ui, sans-serif;
+    color: #0F2A3F;
+    opacity: .7;
+}
+
+.feedback .form-floating > .form-control:focus ~ label,
+.feedback .form-floating > .form-control:not(:placeholder-shown) ~ label {
+    color: #2C99D6;
+    opacity: 1;
+}
+
+.feedback-textarea {
+    min-height: 160px;
     resize: vertical;
 }
 
-#charCount {
-    display: block;
-    text-align: right;
-    color: #82909b;
-    margin-top: 7px;
-}
-
-/* Star Rating */
-
-.stars {
+/* Dropdown trigger */
+.feedback-select {
     display: flex;
-    gap: 8px;
-}
-
-.star {
-    border: none;
-    background: none;
-    color: #cbd2d8;
-    font-size: 35px;
-    cursor: pointer;
-    transition: 0.2s;
-}
-
-.star.selected {
-    color: #f5ad28;
-}
-
-.star:hover {
-    transform: scale(1.15);
-}
-
-#ratingText {
-    color: #82909b;
-    font-size: 13px;
-    margin-top: 5px;
-}
-
-/* Submit Button */
-
-.submit-btn {
+    align-items: center;
+    justify-content: space-between;
     width: 100%;
-    padding: 16px;
-    border: none;
+    padding: 1rem .75rem;
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 1rem;
+    color: #0F2A3F;
+    background-color: #F8FAFC;
+    border: 1px solid rgba(44, 153, 214, .4);
+    border-radius: 8px;
+    text-align: left;
+    transition: border-color .2s, box-shadow .2s, opacity .2s;
+}
+
+.feedback-select:not(.has-value) {
+    opacity: .75;
+}
+
+.feedback-select:hover,
+.feedback-select:focus,
+.feedback-select.show {
+    color: #0F2A3F;
+    background-color: #F8FAFC;
+    border-color: #2C99D6;
+    box-shadow: 0 0 0 3px rgba(44, 153, 214, .18);
+}
+
+.feedback-select::after {
+    margin-left: auto;
+    color: #2C99D6;
+}
+
+/* Dropdown menu */
+.feedback .dropdown-menu {
+    border: 1px solid rgba(44, 153, 214, .35);
+    border-radius: 8px;
+    padding: 4px;
+    box-shadow: 0 6px 18px rgba(15, 42, 63, .12);
+}
+
+.feedback .dropdown-item {
+    font-family: 'Inter', system-ui, sans-serif;
+    color: #0F2A3F;
     border-radius: 6px;
-    background: #2998d0;
-    color: white;
-    font-size: 17px;
-    font-weight: bold;
+    padding: 8px 12px;
+}
+
+.feedback .dropdown-item:hover,
+.feedback .dropdown-item:focus {
+    background-color: rgba(44, 153, 214, .12);
+    color: #0F2A3F;
+}
+
+.feedback .dropdown-item.selected {
+    background-color: #2C99D6;
+    color: #F8FAFC;
+}
+
+/* Submit button */
+.btnsmbt {
+    width: 100%;
+    padding: 12px 24px;
+    font-family: 'Montserrat', system-ui, sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: .01em;
+    color: #F8FAFC;
+    background-color: #E8621F;
+    border: 1px solid #E8621F;
+    border-radius: 8px;
     cursor: pointer;
-    transition: 0.3s;
+    transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease;
 }
 
-.submit-btn:hover {
-    background: #1679ad;
+.btnsmbt:hover,
+.btnsmbt:focus-visible {
+    background-color: #d9531e;
+    border-color: #d9531e;
+    color: #F8FAFC;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(232, 98, 31, .35);
+    outline: none;
 }
 
-/* Success Message */
-
-#successMessage {
-    text-align: center;
-    color: #16834b;
-    font-weight: bold;
-    margin-top: 18px;
+.btnsmbt:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 10px rgba(232, 98, 31, .3);
+}
+@media (max-width: 767px) {
+    .feedback { padding: 40px 16px; }
+    .feedbackborder { padding: 20px; border-radius: 10px; }
+    .feedback-sub { margin-bottom: 22px; }
 }
 
-/* Footer */
-
-footer {
-    background: #173b56;
-    color: white;
-    text-align: center;
-    padding: 22px;
+@media (max-width: 480px) {
+    .feedback { padding: 32px 12px; }
+    .feedbackborder { padding: 16px; }
+    .feedback-title { font-size: 1.5rem; }
+    .feedback-sub { font-size: .92rem; }
+    .feedback-textarea { min-height: 130px; }
+    .btnsmbt { padding: 11px 20px; font-size: .95rem; }
 }
-
-/* Mobile Responsive */
-
-@media (max-width: 768px) {
-
-    .navbar {
-        flex-direction: column;
-        padding: 20px 10px;
-    }
-
-    .navbar nav {
-        justify-content: center;
-        gap: 3px;
-    }
-
-    .navbar nav a {
-        font-size: 14px;
-        padding: 10px;
-    }
-
-    .feedback-heading h1 {
-        font-size: 29px;
-    }
-
-    .feedback-container {
-        padding: 22px;
-    }
+.feedbackborder{
+    transform: translate(-200px,-20px);
 }

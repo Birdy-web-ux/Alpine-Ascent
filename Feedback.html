@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Alpine Ascents &vert; Feedback</title>
     <link rel="stylesheet" href="Feeback.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
@@ -33,121 +33,48 @@
     </div>
   </nav>
 </header>
+<section class="feedback">
+  <div class="feedback-inner">
+    <h2 class="feedback-title">Share Your Experience</h2>
+    <p class="feedback-sub">Tell us how your climb went — it helps other climbers plan theirs.Your shared Experience helps us Improve</p>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Feedback | Alpine Ascents</title>
-    <link rel="stylesheet" href="feedback.css">
-</head>
-<body>
+    <div class="feedbackborder">
+      <form class="feedback-form" onsubmit="return false;">
 
-   
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Feedback | Alpine Ascents</title>
-    <link rel="stylesheet" href="feedback.css">
-</head>
-<body>
-
-  
-
-    <!-- Feedback Section -->
-    <main class="feedback-section">
-
-        <div class="feedback-heading">
-            <span class="small-title">ALPINE ASCENTS</span>
-
-            <h1>Share Your Experience</h1>
-
-            <p>
-                Your feedback helps us improve our mountain climbing
-                website, courses and climbing services.
-            </p>
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="fbName" placeholder="Your Name" required>
+          <label for="fbName">Your Name</label>
         </div>
 
-        <div class="feedback-container">
-
-            <form id="feedbackForm">
-
-                <h2>Give Your Feedback</h2>
-
-                <p class="form-description">
-                    We would love to hear your thoughts!
-                </p>
-
-                <div class="form-group">
-                    <label for="name">Full Name</label>
-                    <input type="text" id="name"
-                    placeholder="Enter your full name" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="email">Email Address</label>
-                    <input type="email" id="email"
-                    placeholder="Enter your email" required>
-                </div>
-
-                <div class="form-group">
-                    <label>Rate Our Website</label>
-
-                    <div class="stars" id="starRating">
-                        <button type="button" class="star" data-value="1">★</button>
-                        <button type="button" class="star" data-value="2">★</button>
-                        <button type="button" class="star" data-value="3">★</button>
-                        <button type="button" class="star" data-value="4">★</button>
-                        <button type="button" class="star" data-value="5">★</button>
-                    </div>
-
-                    <p id="ratingText">Select your rating</p>
-                </div>
-
-                <div class="form-group">
-                    <label for="category">Feedback Category</label>
-
-                    <select id="category" required>
-                        <option value="">Select a category</option>
-                        <option value="Mountain skills Course">Mountain skills Course </option>
-                        <option value="Climbing Courses">Climbing Courses</option>
-                        <option value="Climbing Schools">Climbing Schools</option>
-                        <option value="Mountain Gear">Mountain Gear</option>
-                        <option value="Website Experience">Overall Experience</option>
-                        <option value="Other">Other</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="message">Your Feedback</label>
-
-                    <textarea id="message"
-                    placeholder="Write your suggestions or feedback here..."
-                    maxlength="500" required></textarea>
-
-                    <small id="charCount">0 / 500 characters</small>
-                </div>
-
-                <button type="submit" class="submit-btn">
-                    Submit Feedback
-                </button>
-
-                <p id="successMessage"></p>
-
-            </form>
-
+        <div class="form-floating mb-3">
+          <input type="email" class="form-control" id="fbEmail" placeholder="name@example.com" required>
+          <label for="fbEmail">Your Email</label>
         </div>
 
-    </main>
+<div class="form-floating mb-3">
+  <select class="form-select feedback-select" id="fbExperience" required>
+    <option value="" selected disabled>Choose your experience</option>
+    <option value="Bad">Bad</option>
+    <option value="Great">Great</option>
+    <option value="Amazing">Amazing</option>
+    <option value="Perfect">Perfect</option>
+  </select>
+  <label for="fbExperience">Your Experience</label>
+</div>
 
-    <footer>
-        <p>© 2026 Alpine Ascents | Explore. Climb. Achieve.</p>
-    </footer>
+        <div class="form-floating mb-3">
+          <textarea class="form-control feedback-textarea" id="fbComments"
+                    placeholder="Leave a comment here"></textarea>
+          <label for="fbComments">Comments</label>
+        </div>
 
+        <button type="submit" class="btnsmbt">Submit</button>
+      </form>
+    </div>
+  </div>
+</section>
     <script src="feedback.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 </body>
 </html>
