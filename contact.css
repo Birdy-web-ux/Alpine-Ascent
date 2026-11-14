@@ -1,3 +1,11 @@
+*, *::before, *::after { box-sizing: border-box; }
+html, body { overflow-x: hidden; }
+
+.navbar-brand img {
+    height: 80px;
+    width: 80px;
+    object-fit: contain;
+}
 #Nav {
     background-color: #2C99D6;
 }
@@ -11,7 +19,7 @@
     border-bottom-color: #E8621F;
 }
 .navbar .navitem.active {
-    color: #0F2A3F;
+    color: #0F2A3F !important;
     border-bottom-color: #F8FAFC;
     background-color: #F8FAFC;
 }

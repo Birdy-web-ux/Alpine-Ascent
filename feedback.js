@@ -6,20 +6,32 @@ function feedback() {
 
     if (name == "" || mail == "" || exp == "") {
         Swal.fire({
-            icon: "error",
             title: "Something went wrong",
-            text: "Please fill in every input."
+            text: "Please fill in every input.",
+            imageUrl: "Pics/images.png ",
+            imageWidth: 80,
+            imageHeight: 80,
+            imageAlt: "Error Mountain"
         });
     } else {
-        localStorage.setItem("fbName", name);
-        localStorage.setItem("fbEmail", mail);
-        localStorage.setItem("fbExperience", exp);
-        localStorage.setItem("fbComments", comment);
 
+        let newEntry = "Name: " + name + " | Email: " + mail + " | Exp: " + exp + " | Comment: " + comment;
+        
+        let oldData = localStorage.getItem("allFeedback");
+
+        if (oldData == null) {
+            localStorage.setItem("allFeedback", newEntry);
+        } else {
+            let combinedData = oldData + "\n" + newEntry;
+            localStorage.setItem("allFeedback", combinedData);
+        }
         Swal.fire({
-            icon: "success",
             title: "Feedback Submitted",
-            text: " Thank You your feedback helps us improve, " + name + "."
+            text: "Thank you, your feedback helps us improve, " + name + ".",
+            imageUrl: "Pics/sucess.jpg", // <-- PUT YOUR IMAGE PATH HERE
+            imageWidth: 100,
+            imageHeight: 100,
+            imageAlt: "Success Mountain"
         });
     }
 }

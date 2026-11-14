@@ -1,10 +1,13 @@
-html, body {
-    overflow-x: hidden;
-    width: 100%;
+*, *::before, *::after { box-sizing: border-box; }
+html, body { overflow-x: hidden; }
+
+.navbar-brand img {
+    height: 80px;
+    width: 80px;
+    object-fit: contain;
 }
 #Nav {
     background-color: #2C99D6;
-    border-bottom: solid 4px #F8FAFC;
 }
 .navbar .navitem {
     color: #F8FAFC;
@@ -21,6 +24,7 @@ html, body {
     background-color: #F8FAFC;
 }
 #contactbtn {
+    border-radius: 10px;
     background-color: #E8621F;
     color: #F8FAFC;
     border: 1px solid #E8621F;
@@ -42,11 +46,6 @@ html, body {
     .navbar .navitem { font-size: .8rem; padding-left: .4rem; padding-right: .4rem; }
     .navbar-brand img { height: 70px; width: 70px; }
     #contactbtn { font-size: .85rem; padding: 6px 12px; }
-    .navbar-nav.gap-lg-5 {
-        flex-wrap: wrap;
-        row-gap: .25rem;
-        justify-content: center;
-    }
 }
 @media (max-width: 991px) {
     .navbar-brand img { height: 70px; width: 70px; }
