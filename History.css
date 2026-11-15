@@ -1,0 +1,368 @@
+*, *::before, *::after { box-sizing: border-box; }
+html, body { overflow-x: hidden; }
+
+.navbar-brand img {
+    height: 80px;
+    width: 80px;
+    object-fit: contain;
+}
+#Nav {
+    background-color: #2C99D6;
+}
+.navbar .navitem {
+    color: #F8FAFC;
+    border-bottom: 3px solid transparent;
+    transition: color .3s, border-color .3s;
+}
+.navbar .navitem:hover {
+    color: #E8621F;
+    border-bottom-color: #E8621F;
+}
+.navbar .navitem.active {
+    color: #0F2A3F;
+    border-bottom-color: #F8FAFC;
+    background-color: #F8FAFC;
+}
+#contactbtn {
+    border-radius: 10px;
+    background-color: #E8621F;
+    color: #F8FAFC;
+    border: 1px solid #E8621F;
+}
+#contactbtn:hover {
+    background-color: #F8FAFC;
+    color: #E8621F;
+    border-color: #F8FAFC;
+}
+@media (min-width: 1400px) and (max-width: 1599px) {
+    .navbar-nav.gap-lg-5 { gap: 1.5rem !important; }
+}
+@media (min-width: 1200px) and (max-width: 1399px) {
+    .navbar-nav.gap-lg-5 { gap: .75rem !important; }
+    .navbar .navitem { font-size: .95rem; }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+    .navbar-nav.gap-lg-5 { gap: 0 !important; }
+    .navbar .navitem { font-size: .8rem; padding-left: .4rem; padding-right: .4rem; }
+    .navbar-brand img { height: 70px; width: 70px; }
+    #contactbtn { font-size: .85rem; padding: 6px 12px; }
+}
+@media (max-width: 991px) {
+    .navbar-brand img { height: 70px; width: 70px; }
+    .navbar .navitem { padding: 10px 12px; }
+    #contactbtn { display: block; width: 100%; margin: 8px 0 14px; }
+}
+@media (max-width: 480px) {
+    .navbar-brand img { height: 56px; width: 56px; }
+}
+/* ===== Login Button ===== */
+#loginbtn {
+    background-color: #0F2A3F;
+    color: #F8FAFC;
+    border: 1px solid #0F2A3F;
+    border-radius: 10px;
+    padding: 8px 20px;
+    font-weight: 600;
+    transition: background-color .2s, color .2s;
+}
+
+#loginbtn:hover {
+    background-color: #F8FAFC;
+    color: #0F2A3F;
+    border-color: #F8FAFC;
+}
+
+/* ===== Navbar Dropdown Styling ===== */
+#Nav .dropdown-menu {
+    background-color: #0F2A3F; /* Dark navy to match the theme */
+    border: 1px solid rgba(248, 250, 252, 0.2);
+    border-radius: 8px;
+    margin-top: 10px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+#Nav .dropdown-item {
+    color: #F8FAFC;
+    padding: 8px 16px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+#Nav .dropdown-item:hover, 
+#Nav .dropdown-item:focus {
+    background-color: #2C99D6; /* Blue hover */
+    color: #F8FAFC;
+}
+
+/* Ensure the dropdown toggle looks exactly like the other nav links */
+.navbar .navitem.dropdown-toggle::after {
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+/* ===== Mobile Responsive Fixes ===== */
+@media (max-width: 991px) {
+    #loginbtn {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin: 8px 0 14px;
+    }
+    
+    #Nav .dropdown-menu {
+        background-color: rgba(15, 42, 63, 0.5);
+        border: none;
+        box-shadow: none;
+        margin-top: 0;
+        padding-left: 15px; /* Indents the dropdown on mobile */
+    }
+}
+
+/* ===========================
+   3. GALLERY HEADER
+   =========================== */
+.gallery {
+    padding: 60px 48px 80px;
+    max-width: 1600px;
+    margin: 0 auto;
+    position: relative;
+}
+.g1 {
+    text-align: center;
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 700;
+    color: #0F2A3F;
+    margin: 0 0 10px;
+}
+.g2 {
+    text-align: center;
+    font-size: clamp(.95rem, 2vw, 1.15rem);
+    color: #0F2A3F;
+    opacity: .75;
+    margin: 0 0 60px;
+    line-height: 1.55;
+}
+
+/* ===========================
+   4. MOMENT (alternating) — carded layout
+   =========================== */
+.moment {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+    gap: 56px;
+    align-items: stretch;
+    margin-bottom: 40px;
+    padding: 36px;
+    border-radius: 16px;
+    /* Solid white cards sit on the patterned background */
+    background-color: #ffffff; 
+    border: 1px solid rgba(44, 153, 214, .15);
+    /* Deep soft shadow makes the cards stand out */
+    box-shadow: 0 12px 32px rgba(15, 42, 63, 0.06), 0 2px 8px rgba(15, 42, 63, 0.04);
+    position: relative;
+    overflow: hidden;
+    transition: border-color .3s ease, box-shadow .3s ease, transform .3s ease;
+}
+
+/* Accent bar on the outer edge of each card */
+.moment::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 6px;
+    background: linear-gradient(180deg, #2C99D6 0%, #E8621F 100%);
+    opacity: .85;
+}
+.moment.reverse::before {
+    left: auto;
+    right: 0;
+}
+
+.moment:hover {
+    border-color: rgba(232, 98, 31, .45);
+    box-shadow: 0 20px 40px rgba(232, 98, 31, 0.12), 0 4px 12px rgba(15, 42, 63, 0.05);
+    transform: translateY(-2px);
+}
+
+/* Alternating order */
+.moment.reverse .moment-img { order: 2; }
+.moment.reverse .moment-text { order: 1; }
+
+/* Image */
+.moment-img {
+    overflow: hidden;
+    border-radius: 12px;
+    border: 1px solid rgba(44, 153, 214, .25);
+    background-color: rgba(44, 153, 214, .06);
+    height: 100%;
+    min-height: 320px;
+    transition: box-shadow .4s ease;
+}
+.moment:hover .moment-img {
+    box-shadow: 0 0 0 4px rgba(44, 153, 214, .12);
+}
+.moment-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform .6s ease;
+}
+.moment:hover .moment-img img {
+    transform: scale(1.04);
+}
+
+/* Text */
+.moment-text {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.moment-year {
+    display: inline-block;
+    align-self: flex-start;
+    font-family: 'Montserrat', system-ui, sans-serif;
+    font-size: .8rem;
+    font-weight: 700;
+    letter-spacing: .12em;
+    color: #F8FAFC;
+    background-color: #E8621F;
+    padding: 3px 10px;
+    border-radius: 4px;
+    margin-bottom: 12px;
+}
+
+.moment-title {
+    font-size: clamp(1.3rem, 2.6vw, 1.85rem);
+    font-weight: 700;
+    color: #0F2A3F;
+    margin: 0 0 14px;
+    letter-spacing: -0.02em;
+}
+
+.moment-desc {
+    color: #0F2A3F;
+    opacity: .9;
+    font-size: 1rem;
+    line-height: 1.65;
+    margin: 0 0 16px;
+}
+
+.moment-meta {
+    font-family: 'Montserrat', system-ui, sans-serif;
+    font-size: .82rem;
+    font-weight: 500;
+    letter-spacing: .04em;
+    color: #2C99D6;
+    margin: 0;
+}
+
+/* ===========================
+   5. GALLERY RESPONSIVE
+   =========================== */
+@media (max-width: 1199px) {
+    .gallery { padding: 50px 32px 70px; }
+    .moment { gap: 40px; padding: 28px; }
+}
+
+@media (max-width: 991px) {
+    .moment,
+    .moment.reverse {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        align-items: stretch;
+        padding: 24px;
+    }
+    .moment .moment-img,
+    .moment.reverse .moment-img { order: 1; height: auto; }
+    .moment .moment-text,
+    .moment.reverse .moment-text { order: 2; }
+    .moment-img { aspect-ratio: 16 / 10; min-height: 0; }
+    .moment { margin-bottom: 28px; }
+    .g2 { margin-bottom: 40px; }
+    .moment.reverse::before { left: 0; right: auto; }
+}
+
+@media (max-width: 767px) {
+    .gallery { padding: 40px 24px 60px; }
+    .moment { gap: 20px; padding: 20px; margin-bottom: 24px; }
+}
+
+@media (max-width: 576px) {
+    .gallery { padding: 36px 16px 50px; }
+    .g2 { margin-bottom: 32px; }
+    .moment { gap: 16px; padding: 16px; margin-bottom: 20px; border-radius: 12px; }
+    .moment::before { width: 5px; }
+    .moment-img { border-radius: 10px; aspect-ratio: 4 / 3; }
+    .moment-title { margin-bottom: 10px; }
+    .moment-desc { font-size: .95rem; line-height: 1.6; }
+    .moment-meta { font-size: .78rem; }
+}
+
+/* ===========================
+   6. FOOTER
+   =========================== */
+.site-footer {
+    background-color: #0F2A3F;
+    border-top: 4px solid #2C99D6;
+    padding: 50px 20px 20px;
+    color: #F8FAFC;
+    /* Patterned background stops here so footer is solid */
+    position: relative;
+    z-index: 10;
+}
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.4fr;
+    gap: 30px;
+}
+.site-footer h4 {
+    color: #F8FAFC;
+    margin: 0 0 10px;
+    font-size: 1.05rem;
+}
+.site-footer p {
+    margin: 4px 0;
+    opacity: .85;
+    font-size: .93rem;
+    line-height: 1.55;
+}
+.site-footer a {
+    display: block;
+    color: #F8FAFC;
+    opacity: .8;
+    text-decoration: none;
+    padding: 2px 0;
+    font-size: .93rem;
+    transition: opacity .2s, color .2s;
+}
+.site-footer a:hover {
+    opacity: 1;
+    color: #E8621F;
+}
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 30px;
+    padding-top: 16px;
+    border-top: 1px solid rgba(248, 250, 252, .2);
+    font-size: 14px;
+}
+.footer-links a {
+    display: inline;
+    margin-left: 16px;
+}
+@media (max-width: 991px) {
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 600px) {
+    .site-footer { padding: 36px 16px 16px; }
+    .footer-grid { grid-template-columns: 1fr; gap: 22px; }
+    .footer-bottom { flex-direction: column; gap: 8px; }
+    .footer-links a { margin: 0 16px 0 0; }
+}
