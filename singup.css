@@ -1,0 +1,181 @@
+/* ===========================
+   1. GLOBAL & NAVBAR
+   =========================== */
+*, *::before, *::after { box-sizing: border-box; }
+html, body { 
+    overflow-x: hidden; 
+    background-color: #F8FAFC; /* Matches the rest of your site */
+    font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+}
+
+.navbar-brand img {
+    height: 80px;
+    width: 80px;
+    object-fit: contain;
+}
+#Nav {
+    background-color: #2C99D6;
+}
+.navbar .navitem {
+    color: #F8FAFC;
+    border-bottom: 3px solid transparent;
+    transition: color .3s, border-color .3s;
+}
+.navbar .navitem:hover {
+    color: #E8621F;
+    border-bottom-color: #E8621F;
+}
+#loginbtn {
+    background-color: #0F2A3F;
+    color: #F8FAFC;
+    border: 1px solid #0F2A3F;
+    border-radius: 10px;
+    padding: 8px 20px;
+    font-weight: 600;
+    transition: background-color .2s, color .2s;
+}
+#loginbtn:hover {
+    background-color: #F8FAFC;
+    color: #0F2A3F;
+    border-color: #F8FAFC;
+}
+#Nav .dropdown-menu {
+    background-color: #0F2A3F;
+    border: 1px solid rgba(248, 250, 252, 0.2);
+    border-radius: 8px;
+    margin-top: 10px;
+}
+#Nav .dropdown-item {
+    color: #F8FAFC;
+    padding: 8px 16px;
+}
+#Nav .dropdown-item:hover, 
+#Nav .dropdown-item:focus {
+    background-color: #2C99D6;
+    color: #F8FAFC;
+}
+
+/* ===========================
+   2. SIGN UP FORM
+   =========================== */
+.signup-section {
+    min-height: calc(100vh - 80px); /* Fills screen minus navbar */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.signup-card {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 480px; /* Keeps it from getting too wide on large screens */
+    padding: 40px;
+    border-radius: 16px;
+    border: 1px solid rgba(44, 153, 214, 0.2);
+    box-shadow: 0 12px 32px rgba(15, 42, 63, 0.08);
+}
+
+.signup-title {
+    color: #0F2A3F;
+    font-weight: 700;
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+}
+
+.signup-subtitle {
+    color: #0F2A3F;
+    opacity: 0.7;
+    font-size: 0.95rem;
+}
+
+/* Form Elements */
+.form-label {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #0F2A3F;
+    margin-bottom: 6px;
+}
+
+.form-control {
+    background-color: #F8FAFC;
+    border: 1px solid rgba(44, 153, 214, 0.4);
+    border-radius: 8px;
+    padding: 12px 16px;
+    color: #0F2A3F;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-control:focus {
+    background-color: #ffffff;
+    border-color: #2C99D6;
+    box-shadow: 0 0 0 4px rgba(44, 153, 214, 0.15);
+    outline: none;
+}
+
+.form-text {
+    color: #0F2A3F;
+    opacity: 0.6;
+    font-size: 0.8rem;
+}
+
+/* Submit Button */
+.signup-btn {
+    background-color: #E8621F; /* Action Orange */
+    color: #F8FAFC;
+    border: 1px solid #E8621F;
+    padding: 12px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.signup-btn:hover {
+    background-color: #d9531e;
+    border-color: #d9531e;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(232, 98, 31, 0.3);
+}
+
+/* Login Link */
+.login-link {
+    color: #0F2A3F;
+    opacity: 0.8;
+    font-size: 0.9rem;
+}
+
+.login-link a {
+    color: #2C99D6;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.login-link a:hover {
+    color: #E8621F;
+    text-decoration: underline;
+}
+
+/* ===========================
+   3. RESPONSIVE
+   =========================== */
+@media (max-width: 991px) {
+    #loginbtn { display: block; width: 100%; text-align: center; margin: 8px 0 14px; }
+    #Nav .dropdown-menu { background-color: rgba(15, 42, 63, 0.5); border: none; margin-top: 0; padding-left: 15px; }
+}
+
+@media (max-width: 576px) {
+    .signup-card { padding: 24px; }
+    .signup-title { font-size: 1.5rem; }
+    .form-control { padding: 10px 14px; }
+}

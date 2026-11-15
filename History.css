@@ -19,7 +19,7 @@ html, body { overflow-x: hidden; }
     border-bottom-color: #E8621F;
 }
 .navbar .navitem.active {
-    color: #0F2A3F;
+    color: #0F2A3F !important;
     border-bottom-color: #F8FAFC;
     background-color: #F8FAFC;
 }

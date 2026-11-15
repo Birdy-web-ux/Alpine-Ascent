@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alpine Ascents &vert; Sign Up</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="singup.css">
+</head>
+<body>
+
+    <!-- Reusing your theme's header for consistency -->
+    <header>
+      <nav class="navbar navbar-expand-lg" id="Nav" data-bs-theme="dark">
+        <div class="container-fluid">
+          <a class="navbar-brand py-0 m-0" href="index.html">
+            <img src="Alpine_Ascents_logo-removebg-preview.png" alt="Alpine Ascents" height="100" width="100" class="d-block">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#mainNav" aria-controls="mainNav"
+                  aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-lg-5">
+              <li class="nav-item"><a class="nav-link navitem" href="index.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link navitem" href="Schools.html">Schools</a></li>
+              <li class="nav-item"><a class="nav-link navitem" href="Courses.html">Courses</a></li>
+              <li class="nav-item"><a class="nav-link navitem" href="Gear.html">Gear</a></li>
+              <li class="nav-item"><a class="nav-link navitem" href="History.html">History</a></li>
+              <li class="nav-item dropdown">
+                <a class="nav-link navitem dropdown-toggle" href="#" id="moreDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  More
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="moreDropdown">
+                  <li><a class="dropdown-item" href="contact.html">Contact Us</a></li>
+                  <li><a class="dropdown-item" href="Feedback.html">Feedback</a></li>
+                </ul>
+              </li>
+            </ul>
+            <a class="btn" id="loginbtn" href="#">Login / Sign Up</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Sign Up Form Section -->
+    <main class="signup-section">
+        <div class="signup-card">
+            <div class="text-center mb-4">
+                <h2 class="signup-title">Create an Account</h2>
+                <p class="signup-subtitle">Join Alpine Ascents to start your journey.</p>
+            </div>
+
+            <form>
+                <div class="mb-3">
+                    <label for="fullName" class="form-label">Full Name</label>
+                    <input type="text" class="form-control" id="fullName" placeholder="Jonathan Smith" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="emailInput" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="emailInput" placeholder="jonathan@example.com" aria-describedby="emailHelp" required>
+                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="passwordInput" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="passwordInput" placeholder="Create a strong password" required>
+                </div>
+
+                <div class="mb-4">
+                    <label for="confirmPassword" class="form-label">Confirm Password</label>
+                    <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm your password" required>
+                </div>
+
+                <button type="button" onclick="signup()" class="btn signup-btn w-100 mb-3">Sign Up</button>
+
+                <p class="text-center login-link">
+                    Already have an account? <a href="login.html">Log in here</a>
+                </p>
+            </form>
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="signup.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
