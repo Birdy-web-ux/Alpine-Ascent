@@ -55,7 +55,6 @@ html, body { overflow-x: hidden; }
 @media (max-width: 480px) {
     .navbar-brand img { height: 56px; width: 56px; }
 }
-/* ===== Login Button ===== */
 #loginbtn {
     background-color: #0F2A3F;
     color: #F8FAFC;
@@ -72,9 +71,8 @@ html, body { overflow-x: hidden; }
     border-color: #F8FAFC;
 }
 
-/* ===== Navbar Dropdown Styling ===== */
 #Nav .dropdown-menu {
-    background-color: #0F2A3F; /* Dark navy to match the theme */
+    background-color: #0F2A3F;
     border: 1px solid rgba(248, 250, 252, 0.2);
     border-radius: 8px;
     margin-top: 10px;
@@ -89,17 +87,13 @@ html, body { overflow-x: hidden; }
 
 #Nav .dropdown-item:hover, 
 #Nav .dropdown-item:focus {
-    background-color: #2C99D6; /* Blue hover */
+    background-color: #2C99D6;
     color: #F8FAFC;
 }
-
-/* Ensure the dropdown toggle looks exactly like the other nav links */
 .navbar .navitem.dropdown-toggle::after {
     vertical-align: middle;
     margin-left: 5px;
 }
-
-/* ===== Mobile Responsive Fixes ===== */
 @media (max-width: 991px) {
     #loginbtn {
         display: block;
@@ -113,7 +107,7 @@ html, body { overflow-x: hidden; }
         border: none;
         box-shadow: none;
         margin-top: 0;
-        padding-left: 15px; /* Indents the dropdown on mobile */
+        padding-left: 15px;
     }
 }
 
@@ -266,7 +260,6 @@ html, body { overflow-x: hidden; }
 body {
     background-color: #F8FAFC;
 }
-/* ===== Typography ===== */
 body {
     font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -294,8 +287,6 @@ h1, h2, h3, h4, h5, h6 {
 .g2, .imp4, .imp1, .gear-card .card-text {
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
 }
-/* ===== Card Dropdown Interactions ===== */
-/* ===== Card Dropdown Interactions ===== */
 .clickable-card {
     cursor: pointer;
     transition: background-color 0.2s ease;
@@ -316,26 +307,25 @@ h1, h2, h3, h4, h5, h6 {
     transform: rotate(180deg);
     color: #E8621F;
 }
-/* ===== Improved Tool Images Gallery ===== */
 .tools-gallery {
-    background-color: #1d6b9a; /* Darker blue background */
+    background-color: #1d6b9a;
     display: flex;
-    flex-wrap: wrap; /* Keeps them inline, wraps to next line if no space */
+    flex-wrap: wrap;
     gap: 10px;
     padding: 16px;
     border-top: 1px solid rgba(248, 250, 252, 0.15);
-    justify-content: center; /* Centers the images nicely */
+    justify-content: center;
 }
 
 .tools-gallery img {
-    flex: 1 1 auto; /* Allows them to sit inline */
-    max-width: 140px; /* <--- THIS STOPS THEM FROM GETTING TOO BIG */
-    height: 110px; /* Fixed height so the row looks clean */
-    object-fit: contain; /* Shows the FULL image, no cropping */
+    flex: 1 1 auto;
+    max-width: 140px;
+    height: 110px;
+    object-fit: contain;
     border-radius: 8px;
     border: 2px solid rgba(248, 250, 252, 0.2);
-    background-color: rgba(15, 42, 63, 0.3); /* Slightly dark background so full images pop */
-    padding: 4px; /* A little breathing room inside the frame */
+    background-color: rgba(15, 42, 63, 0.3);
+    padding: 4px;
     transition: transform 0.2s ease, border-color 0.2s ease;
 }
 

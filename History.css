@@ -55,7 +55,6 @@ html, body { overflow-x: hidden; }
 @media (max-width: 480px) {
     .navbar-brand img { height: 56px; width: 56px; }
 }
-/* ===== Login Button ===== */
 #loginbtn {
     background-color: #0F2A3F;
     color: #F8FAFC;
@@ -71,8 +70,6 @@ html, body { overflow-x: hidden; }
     color: #0F2A3F;
     border-color: #F8FAFC;
 }
-
-/* ===== Navbar Dropdown Styling ===== */
 #Nav .dropdown-menu {
     background-color: #0F2A3F; /* Dark navy to match the theme */
     border: 1px solid rgba(248, 250, 252, 0.2);
@@ -89,17 +86,13 @@ html, body { overflow-x: hidden; }
 
 #Nav .dropdown-item:hover, 
 #Nav .dropdown-item:focus {
-    background-color: #2C99D6; /* Blue hover */
+    background-color: #2C99D6;
     color: #F8FAFC;
 }
-
-/* Ensure the dropdown toggle looks exactly like the other nav links */
 .navbar .navitem.dropdown-toggle::after {
     vertical-align: middle;
     margin-left: 5px;
 }
-
-/* ===== Mobile Responsive Fixes ===== */
 @media (max-width: 991px) {
     #loginbtn {
         display: block;
@@ -113,13 +106,9 @@ html, body { overflow-x: hidden; }
         border: none;
         box-shadow: none;
         margin-top: 0;
-        padding-left: 15px; /* Indents the dropdown on mobile */
+        padding-left: 15px;
     }
 }
-
-/* ===========================
-   3. GALLERY HEADER
-   =========================== */
 .gallery {
     padding: 60px 48px 80px;
     max-width: 1600px;
@@ -141,10 +130,6 @@ html, body { overflow-x: hidden; }
     margin: 0 0 60px;
     line-height: 1.55;
 }
-
-/* ===========================
-   4. MOMENT (alternating) — carded layout
-   =========================== */
 .moment {
     display: grid;
     grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
@@ -153,17 +138,13 @@ html, body { overflow-x: hidden; }
     margin-bottom: 40px;
     padding: 36px;
     border-radius: 16px;
-    /* Solid white cards sit on the patterned background */
     background-color: #ffffff; 
     border: 1px solid rgba(44, 153, 214, .15);
-    /* Deep soft shadow makes the cards stand out */
     box-shadow: 0 12px 32px rgba(15, 42, 63, 0.06), 0 2px 8px rgba(15, 42, 63, 0.04);
     position: relative;
     overflow: hidden;
     transition: border-color .3s ease, box-shadow .3s ease, transform .3s ease;
 }
-
-/* Accent bar on the outer edge of each card */
 .moment::before {
     content: "";
     position: absolute;
@@ -184,12 +165,8 @@ html, body { overflow-x: hidden; }
     box-shadow: 0 20px 40px rgba(232, 98, 31, 0.12), 0 4px 12px rgba(15, 42, 63, 0.05);
     transform: translateY(-2px);
 }
-
-/* Alternating order */
 .moment.reverse .moment-img { order: 2; }
 .moment.reverse .moment-text { order: 1; }
-
-/* Image */
 .moment-img {
     overflow: hidden;
     border-radius: 12px;
@@ -212,8 +189,6 @@ html, body { overflow-x: hidden; }
 .moment:hover .moment-img img {
     transform: scale(1.04);
 }
-
-/* Text */
 .moment-text {
     min-width: 0;
     display: flex;
@@ -259,10 +234,6 @@ html, body { overflow-x: hidden; }
     color: #2C99D6;
     margin: 0;
 }
-
-/* ===========================
-   5. GALLERY RESPONSIVE
-   =========================== */
 @media (max-width: 1199px) {
     .gallery { padding: 50px 32px 70px; }
     .moment { gap: 40px; padding: 28px; }
@@ -301,16 +272,11 @@ html, body { overflow-x: hidden; }
     .moment-desc { font-size: .95rem; line-height: 1.6; }
     .moment-meta { font-size: .78rem; }
 }
-
-/* ===========================
-   6. FOOTER
-   =========================== */
 .site-footer {
     background-color: #0F2A3F;
     border-top: 4px solid #2C99D6;
     padding: 50px 20px 20px;
     color: #F8FAFC;
-    /* Patterned background stops here so footer is solid */
     position: relative;
     z-index: 10;
 }

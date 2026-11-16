@@ -1,8 +1,6 @@
         function login() {
             let mail = document.getElementById("emailInput").value;
             let pass = document.getElementById("passwordInput").value;
-
-            // 1. Check for empty fields
             if (mail == "" || pass == "") {
                 Swal.fire({
                     title: "Missing Details",
@@ -11,8 +9,6 @@
                 });
                 return;
             }
-
-            // 2. Get users from localStorage
             let allUsers = localStorage.getItem("allUsers");
 
             if (allUsers == null) {
@@ -25,15 +21,11 @@
                 });
                 return;
             }
-
-            // 3. Split the data by newlines to get individual users
             let usersArray = allUsers.split("\n");
             let foundName = null;
-
-            // 4. Loop through users to find a match
             for (let i = 0; i < usersArray.length; i++) {
                 let line = usersArray[i];
-                let parts = line.split(" | "); // Splits: "Name: X", "Email: Y", "Password: Z"
+                let parts = line.split(" | ");
 
                 if (parts.length >= 3) {
                     let savedEmail = parts[1].replace("Email: ", "").trim();
@@ -42,14 +34,11 @@
 
                     if (savedEmail === mail && savedPass === pass) {
                         foundName = savedName;
-                        break; // Stop looping, we found them!
+                        break;
                     }
                 }
             }
-
-            // 5. Show success or error
             if (foundName !== null) {
-                // Save current user to show on navbar
                 localStorage.setItem("currentUser", foundName);
 
                 Swal.fire({
@@ -61,7 +50,7 @@
                     imageAlt: "Success Mountain"
                 }).then((result) => {
                     if (result.isConfirmed) {
-                        window.location.href = "index.html"; // Redirect to home
+                        window.location.href = "index.html";
                     }
                 });
             } else {

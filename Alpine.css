@@ -55,7 +55,6 @@ html, body { overflow-x: hidden; }
 @media (max-width: 480px) {
     .navbar-brand img { height: 56px; width: 56px; }
 }
-/* ===== Login Button ===== */
 #loginbtn {
     background-color: #0F2A3F;
     color: #F8FAFC;
@@ -71,10 +70,8 @@ html, body { overflow-x: hidden; }
     color: #0F2A3F;
     border-color: #F8FAFC;
 }
-
-/* ===== Navbar Dropdown Styling ===== */
 #Nav .dropdown-menu {
-    background-color: #0F2A3F; /* Dark navy to match the theme */
+    background-color: #0F2A3F;
     border: 1px solid rgba(248, 250, 252, 0.2);
     border-radius: 8px;
     margin-top: 10px;
@@ -89,17 +86,13 @@ html, body { overflow-x: hidden; }
 
 #Nav .dropdown-item:hover, 
 #Nav .dropdown-item:focus {
-    background-color: #2C99D6; /* Blue hover */
+    background-color: #2C99D6;
     color: #F8FAFC;
 }
-
-/* Ensure the dropdown toggle looks exactly like the other nav links */
 .navbar .navitem.dropdown-toggle::after {
     vertical-align: middle;
     margin-left: 5px;
 }
-
-/* ===== Mobile Responsive Fixes ===== */
 @media (max-width: 991px) {
     #loginbtn {
         display: block;
@@ -113,7 +106,7 @@ html, body { overflow-x: hidden; }
         border: none;
         box-shadow: none;
         margin-top: 0;
-        padding-left: 15px; /* Indents the dropdown on mobile */
+        padding-left: 15px;
     }
 }
 .background {
@@ -728,7 +721,6 @@ html, body { overflow-x: hidden; }
     .footer-bottom { flex-direction: column; gap: 8px; }
     .footer-links a { margin: 0 16px 0 0; }
 }
-/* ===== Typography ===== */
 body {
     font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -742,21 +734,18 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.2;
 }
 
-/* Hero headline + display headings */
 .slidertxt1, .abt1, .exp1, .courses1, .sevensummits, .sch1, .schd5 {
     font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
     font-weight: 700;
     letter-spacing: -0.02em;
 }
 
-/* Kickers / eyebrows */
 .slidertxt, .abt, .guide-num {
     font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
     font-weight: 600;
     letter-spacing: 0.06em;
 }
 
-/* Card + section subheadings */
 .courses3, .interskills, .advskills,
 .explore-card .card-title {
     font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
@@ -764,7 +753,6 @@ h1, h2, h3, h4, h5, h6 {
     letter-spacing: -0.01em;
 }
 
-/* Body copy */
 .slidertxt3, .slidertxt31, .abt2, .abt3,
 .abouttext, .list ul li, .exp2, .courses2, .courses4, .Skills,
 .guide-contact, .guide-contact p, .guide-close,

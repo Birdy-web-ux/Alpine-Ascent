@@ -13,17 +13,13 @@ function feedback() {
             imageHeight: 80,
             imageAlt: "Error Mountain"
         });
-        return; // Stops the function here if inputs are empty
+        return;
     }
-
-    // 1. Manually package the data for Formspree
     let formData = new FormData();
     formData.append("Name", name);
     formData.append("Email", mail);
     formData.append("Experience", exp);
     formData.append("Comments", comment);
-
-    // 2. Send to your Formspree email endpoint
     fetch("https://formspree.io/f/mwlovgnv", {
         method: "POST",
         body: formData,
@@ -33,7 +29,6 @@ function feedback() {
     })
     .then(response => {
         if (response.ok) {
-            // SUCCESS POPUP
             Swal.fire({
                 title: "Feedback Submitted",
                 text: "Thank you, your feedback helps us improve, " + name + ".",
@@ -43,12 +38,9 @@ function feedback() {
                 imageAlt: "Success Mountain"
             }).then((result) => {
                 if (result.isConfirmed) {
-                    // Clear the form after they click OK
                     document.getElementById("fbName").value = "";
                     document.getElementById("fbEmail").value = "";
                     document.getElementById("fbComments").value = "";
-                    
-                    // Reset the dropdown text (if you have a custom JS dropdown)
                     if(document.getElementById("fbExperienceBtn")) {
                         document.getElementById("fbExperienceBtn").innerHTML = "Your Experience";
                         document.getElementById("fbExperienceBtn").classList.remove("has-value");
@@ -56,7 +48,6 @@ function feedback() {
                 }
             });
         } else {
-            // ERROR POPUP
             Swal.fire({
                 title: "Oops!",
                 text: "There was a problem submitting your feedback. Please try again.",
@@ -65,7 +56,6 @@ function feedback() {
         }
     })
     .catch(error => {
-        // NETWORK ERROR POPUP
         Swal.fire({
             title: "Error",
             text: "Network error. Please check your internet connection.",

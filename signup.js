@@ -32,8 +32,6 @@ function signup() {
             let combinedData = oldData + "\n" + newEntry;
             localStorage.setItem("allUsers", combinedData);
         }
-
-        // THIS IS THE NEW LINE: Save the current user's name to display on the navbar
         localStorage.setItem("currentUser", name);
 
         Swal.fire({
@@ -44,7 +42,6 @@ function signup() {
             imageHeight: 100,
             imageAlt: "Success Mountain"
         }).then((result) => {
-            // Redirect them to the home page after they click OK
             if (result.isConfirmed) {
                 window.location.href = "index.html"; 
             }
