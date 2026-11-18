@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
             let name = document.getElementById("cName").value;
             let data = new FormData(form);
+            
             fetch("https://formspree.io/f/mwlovgnv", {
                 method: "POST",
                 body: data,
@@ -31,8 +32,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 } else {
                     Swal.fire({
                         title: "Oops!",
-                        text: "There was a, " + name +". problem submitting your form. Please try again.",
-                        imageUrl: "Pics/avalanche.svg",
+                        text: "There was a problem submitting your form. Please try again.",
+                        imageUrl: "avalanche.svg",
                         imageWidth: 80,
                         imageHeight: 80,
                         imageAlt: "Avalanche"
@@ -43,10 +44,10 @@ document.addEventListener("DOMContentLoaded", function() {
                 Swal.fire({
                     title: "Error",
                     text: "Network error. Please check your internet connection.",
-                        imageUrl: "Pics/avalanche.svg",
-                        imageWidth: 80,
-                        imageHeight: 80,
-                        imageAlt: "Avalanche"
+                    imageUrl: "avalanche.svg",
+                    imageWidth: 80,
+                    imageHeight: 80,
+                    imageAlt: "Avalanche"
                 });
             });
         });
