@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 } else {
                     Swal.fire({
                         title: "Oops!",
-                        text: "There was a problem submitting your form. Please try again.",
+                        text: "There was a, " + name +". problem submitting your form. Please try again.",
                         imageUrl: "Pics/avalanche.svg",
                         imageWidth: 80,
                         imageHeight: 80,
