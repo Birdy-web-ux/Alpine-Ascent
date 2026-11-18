@@ -32,7 +32,10 @@ document.addEventListener("DOMContentLoaded", function() {
                     Swal.fire({
                         title: "Oops!",
                         text: "There was a problem submitting your form. Please try again.",
-                        icon: "error"
+                        imageUrl: "Pics/avalanche.svg",
+                        imageWidth: 80,
+                        imageHeight: 80,
+                        imageAlt: "Avalanche"
                     });
                 }
             })
@@ -41,9 +44,9 @@ document.addEventListener("DOMContentLoaded", function() {
                     title: "Error",
                     text: "Network error. Please check your internet connection.",
                         imageUrl: "Pics/avalanche.svg",
-                        imageWidth: 100,
-                        imageHeight: 100,
-                        imageAlt: "Success Mountain"
+                        imageWidth: 80,
+                        imageHeight: 80,
+                        imageAlt: "Avalanche"
                 });
             });
         });
