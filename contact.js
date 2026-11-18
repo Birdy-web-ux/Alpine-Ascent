@@ -40,7 +40,10 @@ document.addEventListener("DOMContentLoaded", function() {
                 Swal.fire({
                     title: "Error",
                     text: "Network error. Please check your internet connection.",
-                    icon: "error"
+                        imageUrl: "Pics/avalanche.svg",
+                        imageWidth: 100,
+                        imageHeight: 100,
+                        imageAlt: "Success Mountain"
                 });
             });
         });
